@@ -1,8 +1,17 @@
-diff --git a/ncempy/io/emdVelox.py b/ncempy/io/emdVelox.py
-index f1b1596..0b3d4a1 100644
---- a/ncempy/io/emdVelox.py
-+++ b/ncempy/io/emdVelox.py
-@@ -12,8 +12,6 @@ import json
+--- setup.py.orig	2020-02-13 19:14:40.000000000 +0000
++++ setup.py	2020-02-13 19:14:54.000000000 +0000
+@@ -73,7 +73,7 @@
+     # your project is installed. For an analysis of "install_requires" vs pip's
+     # requirements files see:
+     # https://packaging.python.org/en/latest/requirements.html
+-    install_requires=['numpy', 'scipy', 'matplotlib', 'h5py', 'h5py_cache'],       
++    install_requires=['numpy', 'scipy', 'matplotlib', 'h5py'],       
+ 
+     # List additional groups of dependencies here (e.g. development
+     # dependencies). You can install these using the following syntax,
+--- ncempy/io/emdVelox.py.orig	2020-02-13 19:17:37.000000000 +0000
++++ ncempy/io/emdVelox.py	2020-02-13 19:20:58.000000000 +0000
+@@ -12,8 +12,6 @@
  import numpy as np
  import h5py
  
@@ -11,7 +20,7 @@ index f1b1596..0b3d4a1 100644
  class fileEMDVelox:
      '''Class to represent Velox EMD files. It uses the h5py_cache module
      to increase the default cache size from 1MB to 10MB. This significantly
-@@ -70,8 +68,7 @@ class fileEMDVelox:
+@@ -70,8 +68,7 @@
  
          # try opening the file
          try:
@@ -21,23 +30,10 @@ index f1b1596..0b3d4a1 100644
          except:
              print('Error opening file for readonly: "{}"'.format(filename))
              raise
-@@ -185,4 +182,4 @@ class fileEMDVelox:
+@@ -185,4 +182,4 @@
          md['detectorName'] = detectorName
          
          return md
 -    
 \ No newline at end of file
 +    
-diff --git a/setup.py b/setup.py
-index 88c30e4..02e9a64 100644
---- a/setup.py
-+++ b/setup.py
-@@ -73,7 +73,7 @@ setup(
-     # your project is installed. For an analysis of "install_requires" vs pip's
-     # requirements files see:
-     # https://packaging.python.org/en/latest/requirements.html
--    install_requires=['numpy', 'scipy', 'matplotlib', 'h5py', 'h5py_cache'],       
-+    install_requires=['numpy', 'scipy', 'matplotlib', 'h5py'],
- 
-     # List additional groups of dependencies here (e.g. development
-     # dependencies). You can install these using the following syntax,
