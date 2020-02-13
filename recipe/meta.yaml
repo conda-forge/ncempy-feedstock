@@ -13,7 +13,7 @@ source:
     - h5py_cache.diff
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
   noarch: python
   entry_points:
@@ -28,7 +28,7 @@ requirements:
     - python >=3
     - numpy
     - scipy
-    - matplotlib
+    - matplotlib-base
     - h5py
     - setuptools
 
