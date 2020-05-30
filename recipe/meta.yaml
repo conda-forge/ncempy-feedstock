@@ -1,5 +1,5 @@
 {% set name = "ncempy" %}
-{% set version = "1.5.0" %}
+{% set version = "1.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fd08bb09baf467b69c64983993ce133ca21cc9b6f3294ceffbab95110ab3c062
+  sha256: 8372fb04721dbe325660ba19f11b04f864f670a1983ffab912f21c9d20fa43de
   patches:
     - long_description.diff
     - h5py_cache.diff
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
   entry_points:
     - ncem2png = ncempy.command_line.ncem2png:main
