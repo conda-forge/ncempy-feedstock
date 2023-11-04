@@ -1,5 +1,5 @@
 {% set name = "ncempy" %}
-{% set version = "1.10.0" %}
+{% set version = "1.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5025a4e3877c49bb59eacd02f38cb237a6f495b19d19bdcfb57377e401a1fd24
+  sha256: fbc15792d0d057f902beabd934fef0cdb05eead131ef707f6c259d44d1fdd258
 
 build:
   number: 0
